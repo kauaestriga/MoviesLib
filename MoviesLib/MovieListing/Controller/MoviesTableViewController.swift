@@ -22,7 +22,7 @@ class MoviesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        guard let vc = segue.destination as? ViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let vc = segue.destination as? MovieViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
         vc.movie = movies[indexPath.row]
     }
     

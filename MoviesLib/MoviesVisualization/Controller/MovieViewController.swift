@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class MovieViewController: UIViewController {
     
     // MARK: - Properties
     var movie: Movie!
