@@ -174,19 +174,19 @@
                                                 <constraint firstAttribute="width" constant="63" id="gdR-y2-KyX"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Título do filme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TL-b5-QDj">
-                                            <rect key="frame" x="89" y="10" width="251" height="20.333333333333329"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do filme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TL-b5-QDj">
+                                            <rect key="frame" x="89" y="9.9999999999999982" width="251" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sinopse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-SL-WM8">
-                                            <rect key="frame" x="89" y="35" width="251" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sinopse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-SL-WM8">
+                                            <rect key="frame" x="89" y="35" width="251" height="15.666666666666664"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-6Z-eHr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-6Z-eHr">
                                             <rect key="frame" x="89" y="76" width="251" height="16"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" name="Main"/>
@@ -194,7 +194,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="cdj-6Z-eHr" firstAttribute="top" secondItem="wVd-SL-WM8" secondAttribute="bottom" constant="25" id="2dk-UB-KGs"/>
+                                        <constraint firstItem="cdj-6Z-eHr" firstAttribute="top" secondItem="wVd-SL-WM8" secondAttribute="bottom" priority="250" constant="5" id="2dk-UB-KGs"/>
                                         <constraint firstAttribute="bottom" secondItem="cdj-6Z-eHr" secondAttribute="bottom" constant="16" id="2ro-8w-tBj"/>
                                         <constraint firstItem="5TL-b5-QDj" firstAttribute="top" secondItem="dyf-bb-xzg" secondAttribute="top" id="A0I-qd-hRw"/>
                                         <constraint firstItem="dyf-bb-xzg" firstAttribute="leading" secondItem="8XU-9y-6WK" secondAttribute="leading" constant="12" id="FNm-ju-SSj"/>
@@ -202,6 +202,7 @@
                                         <constraint firstItem="wVd-SL-WM8" firstAttribute="leading" secondItem="5TL-b5-QDj" secondAttribute="leading" id="RsA-jE-Vfs"/>
                                         <constraint firstItem="wVd-SL-WM8" firstAttribute="top" secondItem="5TL-b5-QDj" secondAttribute="bottom" constant="4.6666666666666714" id="SWP-gY-bHw"/>
                                         <constraint firstItem="cdj-6Z-eHr" firstAttribute="leading" secondItem="wVd-SL-WM8" secondAttribute="leading" id="Yle-b7-8rJ"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dyf-bb-xzg" secondAttribute="bottom" constant="18" id="e0b-Kx-Hcb"/>
                                         <constraint firstItem="5TL-b5-QDj" firstAttribute="leading" secondItem="dyf-bb-xzg" secondAttribute="trailing" constant="14" id="mT6-AY-Hnk"/>
                                         <constraint firstItem="dyf-bb-xzg" firstAttribute="top" secondItem="8XU-9y-6WK" secondAttribute="top" constant="10" id="nZR-ze-75v"/>
                                         <constraint firstItem="cdj-6Z-eHr" firstAttribute="trailing" secondItem="wVd-SL-WM8" secondAttribute="trailing" id="oxh-WY-Vpd"/>
