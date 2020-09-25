@@ -167,35 +167,49 @@
                                     <rect key="frame" x="0.0" y="0.0" width="348" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dyf-bb-xzg">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dyf-bb-xzg">
                                             <rect key="frame" x="12" y="10" width="63" height="80"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="PrI-xT-MtL"/>
+                                                <constraint firstAttribute="width" constant="63" id="gdR-y2-KyX"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título do filme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TL-b5-QDj">
-                                            <rect key="frame" x="89" y="10" width="251" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Título do filme" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TL-b5-QDj">
+                                            <rect key="frame" x="89" y="10" width="251" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sinopse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-SL-WM8">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sinopse" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-SL-WM8">
                                             <rect key="frame" x="89" y="35" width="251" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-6Z-eHr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nota" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdj-6Z-eHr">
                                             <rect key="frame" x="89" y="76" width="251" height="16"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" name="Main"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cdj-6Z-eHr" firstAttribute="top" secondItem="wVd-SL-WM8" secondAttribute="bottom" constant="25" id="2dk-UB-KGs"/>
+                                        <constraint firstAttribute="bottom" secondItem="cdj-6Z-eHr" secondAttribute="bottom" constant="16" id="2ro-8w-tBj"/>
+                                        <constraint firstItem="5TL-b5-QDj" firstAttribute="top" secondItem="dyf-bb-xzg" secondAttribute="top" id="A0I-qd-hRw"/>
+                                        <constraint firstItem="dyf-bb-xzg" firstAttribute="leading" secondItem="8XU-9y-6WK" secondAttribute="leading" constant="12" id="FNm-ju-SSj"/>
+                                        <constraint firstItem="wVd-SL-WM8" firstAttribute="trailing" secondItem="5TL-b5-QDj" secondAttribute="trailing" id="FY8-mJ-Ytq"/>
+                                        <constraint firstItem="wVd-SL-WM8" firstAttribute="leading" secondItem="5TL-b5-QDj" secondAttribute="leading" id="RsA-jE-Vfs"/>
+                                        <constraint firstItem="wVd-SL-WM8" firstAttribute="top" secondItem="5TL-b5-QDj" secondAttribute="bottom" constant="4.6666666666666714" id="SWP-gY-bHw"/>
+                                        <constraint firstItem="cdj-6Z-eHr" firstAttribute="leading" secondItem="wVd-SL-WM8" secondAttribute="leading" id="Yle-b7-8rJ"/>
+                                        <constraint firstItem="5TL-b5-QDj" firstAttribute="leading" secondItem="dyf-bb-xzg" secondAttribute="trailing" constant="14" id="mT6-AY-Hnk"/>
+                                        <constraint firstItem="dyf-bb-xzg" firstAttribute="top" secondItem="8XU-9y-6WK" secondAttribute="top" constant="10" id="nZR-ze-75v"/>
+                                        <constraint firstItem="cdj-6Z-eHr" firstAttribute="trailing" secondItem="wVd-SL-WM8" secondAttribute="trailing" id="oxh-WY-Vpd"/>
+                                        <constraint firstAttribute="trailing" secondItem="5TL-b5-QDj" secondAttribute="trailing" constant="8" id="yfP-Q9-V5f"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="imageCiewPoster" destination="dyf-bb-xzg" id="oTa-hp-WwW"/>
+                                    <outlet property="imageViewPoster" destination="dyf-bb-xzg" id="ep2-n3-oGm"/>
                                     <outlet property="labelRating" destination="cdj-6Z-eHr" id="NRC-n1-YJu"/>
                                     <outlet property="labelSummary" destination="wVd-SL-WM8" id="9pt-lE-3wa"/>
                                     <outlet property="labelTitle" destination="5TL-b5-QDj" id="xgu-yq-P7O"/>
