@@ -16,6 +16,7 @@
 		ACB5995C251D5C6C00A44A6E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB5995B251D5C6C00A44A6E /* Movie.swift */; };
 		ACB59962251D729800A44A6E /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB59961251D729800A44A6E /* MoviesTableViewController.swift */; };
 		ACB59965251D7AB100A44A6E /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB59964251D7AB100A44A6E /* MovieTableViewCell.swift */; };
+		ACB59968251D7D7900A44A6E /* Movie+RatingFormatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB59967251D7D7900A44A6E /* Movie+RatingFormatted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		ACB5995B251D5C6C00A44A6E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		ACB59961251D729800A44A6E /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		ACB59964251D7AB100A44A6E /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		ACB59967251D7D7900A44A6E /* Movie+RatingFormatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+RatingFormatted.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				ACB5995D251D712000A44A6E /* MovieListing */,
 				ACB59955251D55BC00A44A6E /* MoviesVisualization */,
 				ACB59954251D55A700A44A6E /* Files */,
+				ACB59966251D7D3800A44A6E /* Extensions */,
 				ACB59957251D561600A44A6E /* Supporting Files */,
 			);
 			path = MoviesLib;
@@ -148,6 +151,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		ACB59966251D7D3800A44A6E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACB59967251D7D7900A44A6E /* Movie+RatingFormatted.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +233,7 @@
 			files = (
 				ACB59965251D7AB100A44A6E /* MovieTableViewCell.swift in Sources */,
 				ACB59962251D729800A44A6E /* MoviesTableViewController.swift in Sources */,
+				ACB59968251D7D7900A44A6E /* Movie+RatingFormatted.swift in Sources */,
 				AC17F4F5251AB5D000904574 /* ViewController.swift in Sources */,
 				AC17F4F1251AB5D000904574 /* AppDelegate.swift in Sources */,
 				ACB5995C251D5C6C00A44A6E /* Movie.swift in Sources */,
