@@ -141,6 +141,14 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="cGc-0b-edr"/>
+                    <connections>
+                        <outlet property="imageViewPoster" destination="YGD-5v-WQ9" id="GbB-xh-9oF"/>
+                        <outlet property="labelCategories" destination="Opm-1S-Abg" id="b4W-Z6-s1v"/>
+                        <outlet property="labelDuration" destination="TxD-6K-G6B" id="dE6-Ha-DsM"/>
+                        <outlet property="labelRating" destination="ohp-iP-kai" id="47r-nb-Mcy"/>
+                        <outlet property="labelTitle" destination="et1-mO-gkc" id="elc-Mw-Rfo"/>
+                        <outlet property="textViewSummary" destination="cau-tj-Yji" id="tf2-Ku-nze"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
