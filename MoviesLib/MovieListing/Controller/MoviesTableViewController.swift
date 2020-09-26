@@ -12,7 +12,6 @@ import CoreData
 class MoviesTableViewController: UITableViewController {
     
     // MARK: - Properties
-    var movies: [Movie] = []
     let label: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Sem filmes cadastrados"
@@ -42,14 +41,14 @@ class MoviesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         guard let vc = segue.destination as? MovieViewController, let indexPath = tableView.indexPathForSelectedRow else { return }
-        vc.movie = movies[indexPath.row]
+        vc.movie = fetchedResultController.object(at: indexPath)
     }
     
     // MARK: - IBActions
     
     // MARK: - Methods
     private func loadMovies() {
-        
+        try? fetchedResultController.performFetch()
     }
     
     //MARK: - Table view data source
@@ -58,7 +57,9 @@ class MoviesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        let count = fetchedResultController.fetchedObjects?.count ?? 0
+        tableView.backgroundView = count > 0 ? nil : label
+        return count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,9 +67,17 @@ class MoviesTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        let movie = movies[indexPath.row]
+        let movie = fetchedResultController.object(at: indexPath)
         cell.configure(with: movie)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let movie = fetchedResultController.object(at: indexPath)
+            context.delete(movie)
+            try? context.save()
+        }
     }
     
 }
