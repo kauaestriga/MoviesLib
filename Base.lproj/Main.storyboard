@@ -140,7 +140,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="cGc-0b-edr"/>
+                    <navigationItem key="navigationItem" id="cGc-0b-edr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="hrY-v0-c25">
+                            <connections>
+                                <segue destination="y18-jp-rGG" kind="show" id="DcE-vK-blV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageViewPoster" destination="YGD-5v-WQ9" id="GbB-xh-9oF"/>
                         <outlet property="labelCategories" destination="Opm-1S-Abg" id="b4W-Z6-s1v"/>
@@ -152,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074.4000000000001" y="138.91625615763547"/>
+            <point key="canvasLocation" x="1138" y="479"/>
         </scene>
         <!--Filmes-->
         <scene sceneID="5l5-mq-ib9">
@@ -238,11 +244,100 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Filmes" id="K0g-7P-5yd">
                         <barButtonItem key="backBarButtonItem" title=" " id="Aox-ad-qky"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zW9-87-rnL">
+                            <connections>
+                                <segue destination="y18-jp-rGG" kind="show" id="r7k-Yi-xLK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FK6-i0-iGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="138.91625615763547"/>
+        </scene>
+        <!--Cadastro de Filmes-->
+        <scene sceneID="UrK-XX-Dxk">
+            <objects>
+                <viewController id="y18-jp-rGG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xgX-Wy-l7s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o88-jW-feE">
+                                <rect key="frame" x="16" y="112.99999999999999" width="343" height="151.66666666666663"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Títutlo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQT-rA-A0Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yDQ-ZZ-Ics">
+                                        <rect key="frame" x="0.0" y="44" width="343" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nota" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="khw-aJ-ELH">
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Duração" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M7x-8d-UAc">
+                                                <rect key="frame" x="176.66666666666663" y="0.0" width="166.33333333333337" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="oRu-lc-IIy">
+                                        <rect key="frame" x="0.0" y="88" width="343" height="23.666666666666671"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQb-NV-SDm">
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="23.666666666666668"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="26" id="Vno-B0-JO7"/>
+                                                </constraints>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-co-9Jh">
+                                                <rect key="frame" x="35" y="0.0" width="308" height="23.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdD-ZV-eyc">
+                                        <rect key="frame" x="0.0" y="121.66666666666666" width="343" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iNF-y8-xxw" firstAttribute="trailing" secondItem="o88-jW-feE" secondAttribute="trailing" constant="16" id="8Uq-E8-Df2"/>
+                            <constraint firstItem="o88-jW-feE" firstAttribute="leading" secondItem="iNF-y8-xxw" secondAttribute="leading" constant="16" id="cKd-4x-286"/>
+                            <constraint firstItem="o88-jW-feE" firstAttribute="top" secondItem="iNF-y8-xxw" secondAttribute="top" constant="25" id="xPb-eX-H9c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iNF-y8-xxw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cadastro de Filmes" largeTitleDisplayMode="never" id="fE5-ve-FEr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isS-hC-5Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="-261.57635467980299"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="63L-v7-mAD">
+            <objects>
+                <viewController id="kkj-rJ-39k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cAr-5f-UTD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3Iq-nL-Vaj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyg-er-lKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1942" y="-346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WGy-i9-Wmu">
@@ -271,4 +366,7 @@
             <color red="1" green="0.76470588235294112" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DcE-vK-blV"/>
+    </inferredMetricsTieBreakers>
 </document>
