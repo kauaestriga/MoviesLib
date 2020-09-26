@@ -7,11 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 class MoviesTableViewController: UITableViewController {
     
     // MARK: - Properties
     var movies: [Movie] = []
+    let label: UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = "Sem filmes cadastrados"
+        label.textAlignment = .center
+        label.font = UIFont.italicSystemFont(ofSize: 16.0)
+        return label
+    }()
+    lazy var fetchedResultController: NSFetchedResultsController<Movie> = {
+       
+        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        
+        return fetchedResultController
+    }()
     
     // MARK: - IBOutlets
     
@@ -30,15 +49,7 @@ class MoviesTableViewController: UITableViewController {
     
     // MARK: - Methods
     private func loadMovies() {
-        guard let jsonURL = Bundle.main.url(forResource: "movies", withExtension: "json") else { return }
-        do {
-            let jsonData = try Data(contentsOf: jsonURL)
-            let jsonDecoder = JSONDecoder()
-            movies = try jsonDecoder.decode([Movie].self, from: jsonData)
-            tableView.reloadData()
-        } catch {
-            print(error)
-        }
+        
     }
     
     //MARK: - Table view data source
@@ -60,4 +71,10 @@ class MoviesTableViewController: UITableViewController {
         return cell
     }
     
+}
+
+extension MoviesTableViewController: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
+    }
 }

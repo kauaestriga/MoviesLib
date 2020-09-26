@@ -27,10 +27,10 @@ final class MovieViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        imageViewPoster.image = UIImage(named: movie.image ?? "placeholder")
+        //imageViewPoster.image = UIImage(named: movie.image ?? "placeholder")
         labelTitle.text = movie.title
         labelRating.text = movie.ratingFormatted
-        labelCategories.text = movie.categories
+        //labelCategories.text = movie.categories
         labelDuration.text = movie.duration
         textViewSummary.text = movie.summary
     }
