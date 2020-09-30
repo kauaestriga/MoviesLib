@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  MoviesLib
 //
-//  Created by Usuário Convidado on 22/09/20.
-//  Copyright © 2020 usuarioconvidado. All rights reserved.
+//  Created by Eric Alves Brito on 22/09/20.
+//  Copyright © 2020 FIAP. All rights reserved.
 //
 
 import UIKit
@@ -21,8 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    
-    //MARK: - Core Data Stack
+    // MARK: - Core Data Stack
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "MoviesLib")
         container.loadPersistentStores { (storeDescription, error) in
@@ -32,5 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return container
     }()
+
 }
 

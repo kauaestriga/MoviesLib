@@ -2,13 +2,14 @@
 //  MovieTableViewCell.swift
 //  MoviesLib
 //
-//  Created by Usuário Convidado on 24/09/20.
-//  Copyright © 2020 usuarioconvidado. All rights reserved.
+//  Created by Eric Alves Brito on 24/09/20.
+//  Copyright © 2020 FIAP. All rights reserved.
 //
 
 import UIKit
 
 class MovieTableViewCell: UITableViewCell {
+
     // MARK: - IBOutlets
     @IBOutlet weak var imageViewPoster: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
@@ -21,6 +22,7 @@ class MovieTableViewCell: UITableViewCell {
         labelTitle.text = movie.title
         labelRating.text = movie.ratingFormatted
         labelSummary.text = movie.summary
+        imageViewPoster.image = movie.poster
     }
 
 }

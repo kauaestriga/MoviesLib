@@ -2,8 +2,8 @@
 //  UIViewController+Context.swift
 //  MoviesLib
 //
-//  Created by Usuário Convidado on 26/09/20.
-//  Copyright © 2020 usuarioconvidado. All rights reserved.
+//  Created by Eric Alves Brito on 26/09/20.
+//  Copyright © 2020 FIAP. All rights reserved.
 //
 
 import UIKit
